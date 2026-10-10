@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #08090d;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #232736;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363c52;
+}
+
+/* Ambient glow background layers matching reference image */
+.ambient-bg-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-orb-amber {
+  position: absolute;
+  top: -15%;
+  right: 15%;
+  width: 65vw;
+  height: 65vh;
+  max-width: 900px;
+  max-height: 700px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.16) 0%, rgba(180, 83, 9, 0.10) 45%, rgba(0, 0, 0, 0) 75%);
+  filter: blur(80px);
+  border-radius: 9999px;
+}
+
+.ambient-orb-emerald {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 50vw;
+  height: 55vh;
+  max-width: 700px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.10) 0%, rgba(5, 150, 105, 0.05) 50%, rgba(0, 0, 0, 0) 75%);
+  filter: blur(90px);
+  border-radius: 9999px;
+}
+
+.ambient-orb-crimson {
+  position: absolute;
+  top: 40%;
+  left: -15%;
+  width: 45vw;
+  height: 45vh;
+  max-width: 600px;
+  max-height: 500px;
+  background: radial-gradient(circle, rgba(158, 32, 44, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(100px);
+  border-radius: 9999px;
+}
+
+/* Glass surface styling */
+.glass-panel {
+  background: rgba(16, 18, 25, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(22, 25, 36, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "DueDate - Smart Fee & Dues Reminder System",
+  "description": "Never chase payments again. The smart recurring fee & dues automation platform for schools, tuitions, gyms, academies, hostels, and coachings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
